@@ -21,8 +21,8 @@ fi
 
 # Install required packages
 echo -e "${GREEN}Installing required packages...${NC}"
-apt update && apt upgrade
-apt install npm
+apt update -y && apt upgrade -y
+apt install npm -y
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 apt install nodejs -y
 curl -L https://npmjs.org/install.sh | sudo sh 
