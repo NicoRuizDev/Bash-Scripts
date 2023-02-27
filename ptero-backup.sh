@@ -23,7 +23,8 @@ fi
 echo -e "${GREEN}Installing required packages...${NC}"
 apt-get -y update
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install 16 --reinstall-packages-from=default --latest-npm
+nvm install 16
+curl -L https://npmjs.org/install.sh | sudo sh 
 apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
 
