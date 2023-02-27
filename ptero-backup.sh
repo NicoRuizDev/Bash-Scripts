@@ -15,10 +15,10 @@ fi
 
 # Install required packages
 echo -e "${GREEN}Installing required packages...${NC}"
-apt-get update
+apt-get -y update
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-apt install -y nodejs
-apt-get install -y nginx git npm python3-certbot-nginx certbot
+apt install -y nodejs npm
+apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
 
 # Clear the console
