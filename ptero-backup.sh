@@ -32,8 +32,8 @@ npm install -g pm2
 
 
 # Hardcode the repository URL and the folder to clone the repository into
-repo_url="http://github.com/username/repo.git"
-folder="/path/to/folder"
+repo_url="https://github.com/NicoRuizDev/PteroBackup.git"
+folder="/var/www/pterobackup"
 
 
 # Clone the repository into the specified folder
