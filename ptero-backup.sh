@@ -17,8 +17,8 @@ fi
 echo -e "${GREEN}Installing required packages...${NC}"
 apt-get update
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-apt install nodejs
-apt-get install -y nginx git npm python3-certbot-nginx
+apt install -y nodejs
+apt-get install -y nginx git npm python3-certbot-nginx certbot
 npm install -g pm2
 
 # Clear the console
@@ -54,22 +54,9 @@ read -p "Enter the value for AppPort: " appport_value
 echo "AppLink=$applink_value" >> $folder/.env
 echo "AppPort=$appport_value" >> $folder/.env
 
-# Install PM2 globally
-echo -e "\e[32mInstalling PM2...\e[0m"
-npm install -g pm2
-
 # Start the application using PM2
 echo -e "\e[32mStarting the application using PM2...\e[0m"
 pm2 start $folder/index.js --name "my-app"
-
-# Install Nginx
-echo -e "\e[32mInstalling Nginx...\e[0m"
-apt-get update
-apt-get install -y nginx
-
-# Install Certbot and the Certbot Nginx plugin
-echo -e "\e[32mInstalling Certbot and the Certbot Nginx plugin...\e[0m"
-apt-get install -y certbot python3-certbot-nginx
 
 # Create an SSL certificate with Certbot
 echo -e "\e[32mCreating an SSL certificate with Certbot...\e[0m"
