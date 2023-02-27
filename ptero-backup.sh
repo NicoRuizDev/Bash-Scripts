@@ -21,9 +21,9 @@ fi
 
 # Install required packages
 echo -e "${GREEN}Installing required packages...${NC}"
-apt update -y && apt upgrade -y
-apt install npm -y
-apt install nodejs -y
+sudo apt update
+sudo apt install nodejs
+sudo apt install npm
 apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
 
