@@ -1,22 +1,11 @@
 #!/bin/bash
 
-# Clear the console
-clear
-
 # Define color variables
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 RED='\033[0;31m'
 CYAN='\033[0;36m'
 NC='\033[0m' # No Color
-
-echo ""
-echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
-echo ""
-echo -e "${YELLOW}Made with love by NicoRuizDev\nhttps://github.com/NicoRuizDev/PteroBackup-web${NC}\n"
-
-# Set the welcome message
-echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
 
 # Check if the user is root
 if [[ $EUID -ne 0 ]]; then
@@ -28,9 +17,20 @@ fi
 echo -e "${GREEN}Installing required packages...${NC}"
 apt-get update
 curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
-apt-get install -y nginx git npm python3-certbot-nginx nodejs
+apt install nodejs
+apt-get install -y nginx git npm python3-certbot-nginx
 npm install -g pm2
 
+# Clear the console
+clear
+
+echo ""
+echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
+echo ""
+echo -e "${YELLOW}Made with love by NicoRuizDev\nhttps://github.com/NicoRuizDev/PteroBackup-web${NC}\n"
+
+# Set the welcome message
+echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
 
 # Hardcode the repository URL and the folder to clone the repository into
 repo_url="https://github.com/NicoRuizDev/PteroBackup.git"
