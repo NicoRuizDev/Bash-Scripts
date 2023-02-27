@@ -25,7 +25,6 @@ apt update -y && apt upgrade -y
 apt install npm -y
 curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
 apt install nodejs -y
-curl -L https://npmjs.org/install.sh | sudo sh 
 apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
 
