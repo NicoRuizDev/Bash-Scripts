@@ -27,7 +27,7 @@ fi
 # Install required packages
 echo -e "${GREEN}Installing required packages...${NC}"
 apt-get update
-curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
+curl -fsSL https://deb.nodesource.com/setup_16.x | bash -
 apt-get install -y nginx git npm python3-certbot-nginx nodejs
 npm install -g pm2
 
