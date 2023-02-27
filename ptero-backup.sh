@@ -21,12 +21,11 @@ fi
 
 # Install required packages
 echo -e "${GREEN}Installing required packages...${NC}"
-apt-get -y update
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install 16
-nvm use 16
+apt update && apt upgrade
+apt install npm
+curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
+apt install nodejs -y
 curl -L https://npmjs.org/install.sh | sudo sh 
-sudo cp -r $n/{bin,lib,share} /usr/local 
 apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
 
