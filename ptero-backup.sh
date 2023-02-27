@@ -1,4 +1,10 @@
 #!/bin/bash
+clear
+
+echo ""
+echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
+echo ""
+echo -e "${YELLOW}Made with love by NicoRuizDev\nhttps://github.com/NicoRuizDev/PteroBackup-web${NC}\n"
 
 # Define color variables
 GREEN='\033[0;32m'
@@ -20,17 +26,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install 16 --reinstall-packages-from=default --latest-npm
 apt-get install -y nginx git python3-certbot-nginx certbot
 npm install -g pm2
-
-# Clear the console
-clear
-
-echo ""
-echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
-echo ""
-echo -e "${YELLOW}Made with love by NicoRuizDev\nhttps://github.com/NicoRuizDev/PteroBackup-web${NC}\n"
-
-# Set the welcome message
-echo -e "\e[1m\e[38;5;220mWelcome to Ptero-Backup!\e[0m"
 
 # Hardcode the repository URL and the folder to clone the repository into
 repo_url="https://github.com/NicoRuizDev/PteroBackup.git"
